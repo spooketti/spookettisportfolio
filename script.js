@@ -9,6 +9,25 @@ document.addEventListener("mousemove", function(e) {
   follow.innerHTML = coords
 });
 
+var sequence = [38,38,40,40,37,39,37,39,66,65]
+var pos = 0;
+document.addEventListener('keydown', function(e) 
+  {
+  var expected = sequence[pos]
+  if(e.keyCode == expected)
+  {
+    pos++;
+    if(pos == 10)
+    {
+      alert("WOW")
+      pos = 0;
+    }
+  }
+else
+  {
+    pos = 0;
+  }
+})
 /*
 current design: green-blue neon light flickering in its suddenly activited eyebulbs (key eyebulbs)
 

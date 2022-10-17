@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spooketti's Bots</title>
+    <link rel="stylesheet" href="..//base.css">
+  </head>
+ 
+  <body>
+  <button id="no" onclick="location.href='..//index.html'">Home</button>
+     <div id="HEAD">Spooketti's Discord Bots<a href="../index.html">Home</a></div>
+    <div id="parallax"  style="background-image: url('.//parrallax.png');"><p>Severely Messing With My Friends Using Discord</p></div>
+    <div id="container">
+      <article>
+        <h1>
+          Discord Bots?
+        </h1>
+        <p>
+          Discord is a browser and desktop application designed for instant communication. Utilizing some programming, I started using it to annoy my friends using the built-in bot system. Bots are typically designed by developers and their purpose is to provide utility and fun to group chats called "servers". Just because a bot is meant to be useful, does not mean you are forced to make it useful. When I was in middle school, there used to be a joke when someone said, "What?". It became a race to see who could reply with "Chicken butt." the fastest. By utilizing the power of a Node.js library, and my need to pester my friends, I created my first-ever Discord bot that's only purpose was to do this.
+        </p>
+        <img src="image1.png">
+      </article>
+     <article>
+        <h1>
+          What's Your Story?
+        </h1>
+        <p>
+         I originally started making bots because I was extremely bored one night, probably messing around with some bots that my friend had added. After mindlessly typing 
+command after command because of how enamored I was of the little game someone made with a bot, I realized that it was probably possible to do it myself. I had already
+been studying how to code for a small period of time now, and I figured there wasn't a better way to not only show off to my friends but also get practice in as well. 
+So I sat in my bed, looked up how to make Discord bots, and the rest is history. I made my first ever bot with "discord.js" which is a Node.js library for Discord bots.
+I vividly remember rolling in my bed in excitement watching as my little robot came to life and said little messages. <br>
+My first bot was horribly unoptimized, as everytime a message was sent it would run atleast 23 "if statements" which use a lot of resources very quickly. One if statement for every little command. 
+        </p>
+        <img src="js.png">
+      </article>
+      <article>
+        <h1>
+          How Do I Make A Discord Bot?
+        </h1>
+        <p>
+          In almost every bot I've ever made beyond my first bot, I've never touched discord.js again. I decided to switch to a library for python, being "discord.py". To create a bot you'll need the following,
+          <ul>
+  <li>An account on replit.com(or anything that can host a website and can run code)</li>
+  <li>An account on Discord</li>
+</ul>  </p>
+        <p>
+        To start, head to <a href="https://discord.com/developers/applications" target="_blank" rel="noopener noreferrer">this website</a>, and in the top right lies a "New Application" button. When you click it the following popup will appear:
+        </p>
+        <img src="tutorial1.png">
+        <p>The next step beyond this is to go to the Bot ribbon and then create a bot.</p>
+        <img src="botbefore.png">
+        <p>At this point you can customize your bot's profile to your liking, but for the sake of this tutorial I will be leaving it as the default. It is now time for the hard part, the code. On your bot page there should be an option to reset the bots "token". Reset it, copy the string of text it gives you, and bury that string in the deepest depths of your computers harddrive. It is essentially a password to your bot, and once it's out, your bot is going to be vulnerable to any average Joe <br></br><br></br>Now go to the replit website and press on the button that says "+Create". Choose the python option and name it whatever you like.</p>
+        <img src="pythonprompt.png">
+        <p>You should be faced with the code editor. On the left side there is a lock symbol, click on it </p>
+        <img src="secret.png"></img>
+        <p>In the main python file, write this script.</p>
+        <code>import os<br>
+TOKEN = os.environ['TOKEN']<br>
+import discord<br>
+from discord.ext import commands<br>
+from server import keepAlive<br>
+intents = discord.Intents.all()<br>
+client = commands.Bot(command_prefix="-", intents=intents)<br>
+@client.command(pass_context=True)<br>
+async def ping(ctx):<br>
+    &emsp;await ctx.send(<br>
+        &emsp;&emsp;"pong"<br>
+    &emsp;)<br>
+keepAlive()<br>
+client.run(TOKEN)</code>
+        <p>Create a second python file named "server". Then in the server file, write this script that will handle our website.</p>
+        <code>
+from flask import Flask<br>
+
+from threading import Thread<br>
+
+
+
+app = Flask('')<br>
+
+
+
+@app.route('/')<br>
+
+def home():<br>
+
+    &emsp;return "website"<br>
+
+
+
+def run():<br>
+
+  &emsp;app.run(host='0.0.0.0',port=8080)<br>
+
+
+def keep_alive():  <br>
+
+    &emsp;t = Thread(target=run)
+
+    &emsp;t.start()
+        </code>
+      </article>
+    </div>
+	<script src="index.js"></script>
+  </body>
+</html>
