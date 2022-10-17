@@ -8,3 +8,15 @@ document.addEventListener("mousemove", function(e) {
   //follow.style.top = e.pageY + "px";
   follow.innerHTML = coords
 });
+
+/*
+current design: green-blue neon light flickering in its suddenly activited eyebulbs (key eyebulbs)
+
+scraping metal
+rusty cogs
+eight insect legs
+(23)
+
+TproboscisT needle
+（22）
+*/
