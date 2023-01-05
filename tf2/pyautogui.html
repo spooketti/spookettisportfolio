@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spooketti's Shouting Match</title>
+    <link rel="stylesheet" href="..//base.css">
+     <link rel="icon" href="../icon.jpg"/>
+  </head>
+ 
+  <body>
+  <button id="no" onclick="location.href='..//index.html'">Home</button>
+     <div id="HEAD">Spooketti's Voice Script<a href="../index.html">Home</a></div>
+    <div id="parallax"  style="background-image: url('.//slowtaiko.gif');"><p>Using Python Speech Recognition to play Team Fortress 2</p></div>
+    <div id="container">
+      <article>
+        <h1>
+          Speech Recognition
+        </h1>
+        <p>
+          If you have ever seen a science fiction movie, it very likely had voice controlled technology. A robot that gives you grapes at the call of its name, or a car that starts up with voice control. We are not there yet, but playing video games by screaming at them seems close enough. I wrote a script using the SpeechRecognition library for python. It would listen in for my voice, and then used another library, PyDirectInput to push the buttons.
+        </p>
+        <img src="lookatthepartcount.png" style="width:50%; height:50%;"></img>
+      </article>
+      <article>
+        <h1>Playing Video Games</h1>
+        <p>
+          The pseudocode for my project would be, to constantly loop, inside that loop listen for audio with words, if those words are equal to a command, simulate button presses on my computer.
+        </p>
+        <img></img>
+        <p>For example, I'd turn on the script and then yell at my computer, "WALK!", and it would hold down my W key for about 3 seconds.</p>
+      </article>
+      <article>
+        <h1>How does it work?</h1>
+        <p>
+          To start, a computer needs to have a working microphone. The microphone typically has a small "diaphragm" inside of it. This diaphragm moves when it comes in contact with sound energy. These vibrations of the diaphgram usually move a magnet of sorts that create an electrical current. These electric currents are typically an analog signal. Your computer cannot really do much with the analog signal so it uses an algorithm to convert it to digital. This digital audio is now usable by something like a neural network or any other program designed to analyze your audio. With enough words, your audio can become a string of text ready to be used for whatever purpose you're using it for.
+        </p>
+      </article>
+    </div>
+	<script src="index.js"></script>
+  </body>
+</html>
